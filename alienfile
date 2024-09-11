@@ -13,7 +13,7 @@ share {
 	plugin 'Build::Autoconf';
 	plugin 'Gather::IsolateDynamic';
 	build [
-		'./autogen.sh',
+		'sh autogen.sh',
 		'%{configure} --enable-module-schnorrsig',
 		'%{make}',
 		# '%{make} check', # slow tests of the library. Maybe should run anyway?
