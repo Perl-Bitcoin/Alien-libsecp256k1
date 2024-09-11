@@ -38,9 +38,13 @@ jobs:
       run: |
         cpanm --notest Perl::Tidy Code::TidyAll
         tidyall -a --check-only
+    - name: Install Dist::Zilla
+      run: |
+        cpanm --notest Dist::Zilla
     - name: Install dependencies
       run: |
-        cpanm --installdeps --notest .
+        dzil authordeps --missing | cpanm --notest
+        dzil listdeps --develop --missing | cpanm --notest
     - name: Show Errors on Windows
       if:  ${{ failure() && startsWith( matrix.runner, 'windows-') }}
       run: |
@@ -60,6 +64,5 @@ jobs:
         AUTHOR_TESTING: 1
         RELEASE_TESTING: 1
       run: |
-        prove -l -r t/
-
+        dzil test
 
