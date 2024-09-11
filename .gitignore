@@ -1,0 +1,6 @@
+/.build
+/.tidyall.d
+/Alien-libsecp256k1*
+*.tar.gz
+
+
