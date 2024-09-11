@@ -11,7 +11,7 @@ alien_ok 'Alien::libsecp256k1';
 
 xs_ok do { local $/; <DATA> }, with_subtest {
 	Secp256k1Test::secp256k1_selftest();
-	pass; # selftest should abort the program if it fails
+	pass;    # selftest should abort the program if it fails
 };
 
 done_testing;

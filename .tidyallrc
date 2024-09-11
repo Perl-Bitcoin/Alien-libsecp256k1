@@ -1,5 +1,6 @@
 [PerlTidy]
 select = **/*.{pl,pm,t}
+select = alienfile
 ignore = Alien-libsecp256k1*/**/*.{pl,pm,t}
 argv = -pro=./.perltidyrc --character-encoding=none
 

@@ -9,13 +9,14 @@ share {
 	);
 	plugin Extract => 'tar.gz';
 
-	requires 'Alien::Autotools'; # needed for autoreconf (in autogen.sh)
+	requires 'Alien::Autotools';    # needed for autoreconf (in autogen.sh)
 	plugin 'Build::Autoconf';
 	plugin 'Gather::IsolateDynamic';
 	build [
 		'sh autogen.sh',
 		'%{configure} --enable-module-schnorrsig',
 		'%{make}',
+
 		# '%{make} check', # slow tests of the library. Maybe should run anyway?
 		'%{make} install',
 	];
