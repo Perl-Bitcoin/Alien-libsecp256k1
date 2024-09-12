@@ -20,8 +20,11 @@ See L<Alien::Build::Manual::AlienUser>.
 
 =head1 DESCRIPTION
 
-This module should be used by another module that need
+This module may be used by other modules that require
 L<libsecp256k1|https://github.com/bitcoin-core/secp256k1>.
+
+The module installs the library version C<0.5.1>. It may be updated to install
+new versions when they become available.
 
 =head1 SEE ALSO
 
