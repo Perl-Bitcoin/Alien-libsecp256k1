@@ -3,6 +3,8 @@ use alienfile;
 plugin 'PkgConfig' => 'libsecp256k1';
 
 share {
+	my $run_tests = $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING};
+
 	start_url 'https://github.com/bitcoin-core/secp256k1/archive/refs/tags/v0.5.1.tar.gz';
 	plugin Download => (
 		version => qr/v([0-9\.]+)\.tar/,
@@ -16,10 +18,12 @@ share {
 		'sh autogen.sh',
 		'%{configure} --enable-module-schnorrsig',
 		'%{make}',
-
-		# '%{make} check', # slow tests of the library. Maybe should run anyway?
 		'%{make} install',
 	];
+
+	test [
+		'%{make} check',
+	] if $run_tests;
 };
 
 # vim: ft=perl
