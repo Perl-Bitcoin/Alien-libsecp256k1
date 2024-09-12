@@ -1,5 +1,5 @@
 # Alien::libsecp256k1
-A Perl module for blah blah blah
+A Perl interface to libsecp256k1.
 
 ## Code and documentation
 [Alien::libsecp256k1 on CPAN](https://metacpan.org/release/Alien-libsecp256k1)
@@ -15,5 +15,4 @@ bigger so we can talk it through.
 
 ### Author
 Bartosz Jarzyna <bbrtj.pro@gmail.com>
-
 
