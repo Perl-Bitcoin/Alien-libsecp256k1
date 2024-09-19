@@ -2,6 +2,9 @@ Revision history for Alien-libsecp256k1
 
 {{$NEXT}}
 
+0.050101 - 2024-09-19
+	- Switch building method to cmake
+
 0.050100 - 2024-09-12
 	- First version
 
