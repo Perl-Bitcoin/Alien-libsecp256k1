@@ -12,7 +12,7 @@ __END__
 
 =head1 NAME
 
-Alien::libsecp256k1 - Interface to libsecp256k1
+Alien::libsecp256k1 - Perl builder for libsecp256k1
 
 =head1 SYNOPSIS
 
@@ -21,7 +21,9 @@ See L<Alien::Build::Manual::AlienUser>.
 =head1 DESCRIPTION
 
 This module may be used by other modules that require
-L<libsecp256k1|https://github.com/bitcoin-core/secp256k1>.
+L<libsecp256k1|https://github.com/bitcoin-core/secp256k1>. It will try to
+detect whether this library is installed, and install it for other CPAN modules
+to use.
 
 The module installs the library version C<0.5.1>. It may be updated to install
 new versions when they become available.
