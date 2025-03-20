@@ -25,8 +25,10 @@ L<libsecp256k1|https://github.com/bitcoin-core/secp256k1>. It will try to
 detect whether this library is installed, and install it for other CPAN modules
 to use.
 
-The module installs the library version C<0.5.1>. It may be updated to install
-new versions when they become available.
+The module installs the library version C<v0.6.0>. It may be updated to install
+new versions when they become available. The library is bundled together with
+the module, and the signature of the library's release has been verified before
+releasing the module.
 
 =head2 Testing
 
@@ -49,4 +51,6 @@ Copyright (C) 2024 by Bartosz Jarzyna
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
+
+The bundled libsecp256k1 is licensed under MIT license.
 
